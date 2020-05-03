@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VBCCModelStoreContainer" CdmEntityContainer="VBCCEntities">
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="VBCCModel.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="VBCCModel.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="VBCCModel.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DM_NhanVien_DaoTao">
+      <EntityTypeMapping TypeName="VBCCModel.DM_NhanVien_DaoTao">
+        <MappingFragment StoreEntitySet="DM_NhanVien_DaoTao">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
+          <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+          <ScalarProperty Name="TrinhDo" ColumnName="TrinhDo" />
+          <ScalarProperty Name="HinhThuc" ColumnName="HinhThuc" />
+          <ScalarProperty Name="TenTruong" ColumnName="TenTruong" />
+          <ScalarProperty Name="ChuyenNganh" ColumnName="ChuyenNganh" />
+          <ScalarProperty Name="NuocDaoTao" ColumnName="NuocDaoTao" />
+          <ScalarProperty Name="KhoaDaoTao" ColumnName="KhoaDaoTao" />
+          <ScalarProperty Name="ChuongTrinhDaoTao" ColumnName="ChuongTrinhDaoTao" />
+          <ScalarProperty Name="CuDiHoc" ColumnName="CuDiHoc" />
+          <ScalarProperty Name="NguonKinhPhi" ColumnName="NguonKinhPhi" />
+          <ScalarProperty Name="TotNghiepLoai" ColumnName="TotNghiepLoai" />
+          <ScalarProperty Name="SoVanBang" ColumnName="SoVanBang" />
+          <ScalarProperty Name="NgayVanBang" ColumnName="NgayVanBang" />
+          <ScalarProperty Name="IDDaoTao" ColumnName="IDDaoTao" />
+          <ScalarProperty Name="LinkFile" ColumnName="LinkFile" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VB_TT_File">
+      <EntityTypeMapping TypeName="VBCCModel.VB_TT_File">
+        <MappingFragment StoreEntitySet="VB_TT_File">
+          <ScalarProperty Name="MaDonVi" ColumnName="MaDonVi" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DuongDan" ColumnName="DuongDan" />
+          <ScalarProperty Name="TenFile" ColumnName="TenFile" />
+          <ScalarProperty Name="IDVB" ColumnName="IDVB" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="MineType" ColumnName="MineType" />
+          <ScalarProperty Name="Loai" ColumnName="Loai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UMS_GroupMenu">
+      <EntityTypeMapping TypeName="VBCCModel.UMS_GroupMenu">
+        <MappingFragment StoreEntitySet="UMS_GroupMenu">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UMS_Menu">
+      <EntityTypeMapping TypeName="VBCCModel.UMS_Menu">
+        <MappingFragment StoreEntitySet="UMS_Menu">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="GroupMenuId" ColumnName="GroupMenuId" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UMS_MenuGroupUser">
+      <EntityTypeMapping TypeName="VBCCModel.UMS_MenuGroupUser">
+        <MappingFragment StoreEntitySet="UMS_MenuGroupUser">
+          <ScalarProperty Name="CanEdit" ColumnName="CanEdit" />
+          <ScalarProperty Name="GroupUserId" ColumnName="GroupUserId" />
+          <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UMS_UserGroups">
+      <EntityTypeMapping TypeName="VBCCModel.UMS_UserGroups">
+        <MappingFragment StoreEntitySet="UMS_UserGroups">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="MaDonVi" ColumnName="MaDonVi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USER_CHECKACCESS" FunctionName="VBCCModel.Store.USER_CHECKACCESS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="VBCCModel.USER_CHECKACCESS_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+          <ScalarProperty Name="GroupUserId" ColumnName="GroupUserId" />
+          <ScalarProperty Name="CanEdit" ColumnName="CanEdit" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USER_CHECKADMIN" FunctionName="VBCCModel.Store.USER_CHECKADMIN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="VBCCModel.USER_CHECKADMIN_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="MaDonVi" ColumnName="MaDonVi" />
+          <ScalarProperty Name="UserGroup" ColumnName="UserGroup" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UType" ColumnName="UType" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="AddressInfo" ColumnName="AddressInfo" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="PhongBan" ColumnName="PhongBan" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USER_GETMENU" FunctionName="VBCCModel.Store.USER_GETMENU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="VBCCModel.USER_GETMENU_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="GroupMenuId" ColumnName="GroupMenuId" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="groupName" ColumnName="groupName" />
+          <ScalarProperty Name="GroupIcon" ColumnName="GroupIcon" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USERS_GETALL" FunctionName="VBCCModel.Store.USERS_GETALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="VBCCModel.USERS_GETALL_Result">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="UserGroup" ColumnName="UserGroup" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="AddressInfo" ColumnName="AddressInfo" />
+          <ScalarProperty Name="UType" ColumnName="UType" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="VBCCModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="PhongBan" ColumnName="PhongBan" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="AddressInfo" ColumnName="AddressInfo" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="UType" ColumnName="UType" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UserGroup" ColumnName="UserGroup" />
+          <ScalarProperty Name="MaDonVi" ColumnName="MaDonVi" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="VBCCModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetUser">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="AspNetRole">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="DM_SoGocVanBang">
+      <EntityTypeMapping TypeName="VBCCModel.DM_SoGocVanBang">
+        <MappingFragment StoreEntitySet="DM_SoGocVanBang">
+          <ScalarProperty Name="NgayKy" ColumnName="NgayKy" />
+          <ScalarProperty Name="HinhThuc" ColumnName="HinhThuc" />
+          <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
+          <ScalarProperty Name="MaTruong" ColumnName="MaTruong" />
+          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+          <ScalarProperty Name="So" ColumnName="So" />
+          <ScalarProperty Name="MaDonVi" ColumnName="MaDonVi" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DM_SoGocVanBang_ChiTiet">
+      <EntityTypeMapping TypeName="VBCCModel.DM_SoGocVanBang_ChiTiet">
+        <MappingFragment StoreEntitySet="DM_SoGocVanBang_ChiTiet">
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="SoVaoSoGoc" ColumnName="SoVaoSoGoc" />
+          <ScalarProperty Name="SoHieuVanBang" ColumnName="SoHieuVanBang" />
+          <ScalarProperty Name="XepLoaiTotNghiep" ColumnName="XepLoaiTotNghiep" />
+          <ScalarProperty Name="DanToc" ColumnName="DanToc" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="NoiSinh" ColumnName="NoiSinh" />
+          <ScalarProperty Name="NamSinh" ColumnName="NamSinh" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="MaDonVi" ColumnName="MaDonVi" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DM_Truong">
+      <EntityTypeMapping TypeName="VBCCModel.DM_Truong">
+        <MappingFragment StoreEntitySet="DM_Truong">
+          <ScalarProperty Name="CapHoc" ColumnName="CapHoc" />
+          <ScalarProperty Name="HieuTruong" ColumnName="HieuTruong" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="TenTruong" ColumnName="TenTruong" />
+          <ScalarProperty Name="MaDonVi" ColumnName="MaDonVi" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DM_NamHoc">
+      <EntityTypeMapping TypeName="VBCCModel.DM_NamHoc">
+        <MappingFragment StoreEntitySet="DM_NamHoc">
+          <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
+          <ScalarProperty Name="MaDonVi" ColumnName="MaDonVi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DM_DonVi">
+      <EntityTypeMapping TypeName="VBCCModel.DM_DonVi">
+        <MappingFragment StoreEntitySet="DM_DonVi">
+          <ScalarProperty Name="IsPhong" ColumnName="IsPhong" />
+          <ScalarProperty Name="STTEmail" ColumnName="STTEmail" />
+          <ScalarProperty Name="CapHoc" ColumnName="CapHoc" />
+          <ScalarProperty Name="HieuTruong" ColumnName="HieuTruong" />
+          <ScalarProperty Name="KeToanTruong" ColumnName="KeToanTruong" />
+          <ScalarProperty Name="LapBang" ColumnName="LapBang" />
+          <ScalarProperty Name="MaQHNS" ColumnName="MaQHNS" />
+          <ScalarProperty Name="NganHang" ColumnName="NganHang" />
+          <ScalarProperty Name="IDCapTren" ColumnName="IDCapTren" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="Cap" ColumnName="Cap" />
+          <ScalarProperty Name="MaHuyen" ColumnName="MaHuyen" />
+          <ScalarProperty Name="MaTinh" ColumnName="MaTinh" />
+          <ScalarProperty Name="DonViCapTren" ColumnName="DonViCapTren" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="TenDonVi" ColumnName="TenDonVi" />
+          <ScalarProperty Name="MaDonVi" ColumnName="MaDonVi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DM_LopHoc">
+      <EntityTypeMapping TypeName="VBCCModel.DM_LopHoc">
+        <MappingFragment StoreEntitySet="DM_LopHoc">
+          <ScalarProperty Name="Lop" ColumnName="Lop" />
+          <ScalarProperty Name="MaTruong" ColumnName="MaTruong" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_Nam">
+      <EntityTypeMapping TypeName="VBCCModel.HT_Nam">
+        <MappingFragment StoreEntitySet="HT_Nam">
+          <ScalarProperty Name="Nam" ColumnName="Nam" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_Ngay">
+      <EntityTypeMapping TypeName="VBCCModel.HT_Ngay">
+        <MappingFragment StoreEntitySet="HT_Ngay">
+          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_Thang">
+      <EntityTypeMapping TypeName="VBCCModel.HT_Thang">
+        <MappingFragment StoreEntitySet="HT_Thang">
+          <ScalarProperty Name="Thang" ColumnName="Thang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DM_HocSinh">
+      <EntityTypeMapping TypeName="VBCCModel.DM_HocSinh">
+        <MappingFragment StoreEntitySet="DM_HocSinh">
+          <ScalarProperty Name="Nam" ColumnName="Nam" />
+          <ScalarProperty Name="Thang" ColumnName="Thang" />
+          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="BuoiNghi" ColumnName="BuoiNghi" />
+          <ScalarProperty Name="Lop" ColumnName="Lop" />
+          <ScalarProperty Name="XepLoaiTN" ColumnName="XepLoaiTN" />
+          <ScalarProperty Name="XepLoaiHK" ColumnName="XepLoaiHK" />
+          <ScalarProperty Name="XepLoaiHL" ColumnName="XepLoaiHL" />
+          <ScalarProperty Name="TBCN" ColumnName="TBCN" />
+          <ScalarProperty Name="MyThuat" ColumnName="MyThuat" />
+          <ScalarProperty Name="Nhac" ColumnName="Nhac" />
+          <ScalarProperty Name="TheDuc" ColumnName="TheDuc" />
+          <ScalarProperty Name="TiengPhap" ColumnName="TiengPhap" />
+          <ScalarProperty Name="CongNghe" ColumnName="CongNghe" />
+          <ScalarProperty Name="GDCD" ColumnName="GDCD" />
+          <ScalarProperty Name="TiengAnh" ColumnName="TiengAnh" />
+          <ScalarProperty Name="Dia" ColumnName="Dia" />
+          <ScalarProperty Name="Su" ColumnName="Su" />
+          <ScalarProperty Name="NguVan" ColumnName="NguVan" />
+          <ScalarProperty Name="Sinh" ColumnName="Sinh" />
+          <ScalarProperty Name="Hoa" ColumnName="Hoa" />
+          <ScalarProperty Name="Ly" ColumnName="Ly" />
+          <ScalarProperty Name="Toan" ColumnName="Toan" />
+          <ScalarProperty Name="DienKK" ColumnName="DienKK" />
+          <ScalarProperty Name="DienUT" ColumnName="DienUT" />
+          <ScalarProperty Name="NoiSinh" ColumnName="NoiSinh" />
+          <ScalarProperty Name="DanToc" ColumnName="DanToc" />
+          <ScalarProperty Name="NamSinh" ColumnName="NamSinh" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="HoChuLot" ColumnName="HoChuLot" />
+          <ScalarProperty Name="NamHoc" ColumnName="NamHoc" />
+          <ScalarProperty Name="MaTruong" ColumnName="MaTruong" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
