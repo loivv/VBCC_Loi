@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace VBCC.Controllers.BAOCAO.MauA1
+namespace VBCC.Controllers.BAOCAO
 {
-    public class Mau1A
+    public class Class1
     {
     }
 }
