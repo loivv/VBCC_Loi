@@ -422,5 +422,68 @@ namespace VBCC.Controllers.TRUONGHOC
             }
             return Json(new ResultInfo() { error = 0, msg = "", data = error }, JsonRequestBehavior.AllowGet);
         }
+        public ActionResult excelexport()
+        {
+            string dirTemplate = @"/TaiLieu/Excel/XuatExcelDSHocSinh.xlsx";
+            string fileSave = DateTime.Now.ToString("ddMMyyyyhhmmss") + "XuatExcelDSHocSinh.xlsx";
+            string des = @"/TaiLieu/Temps/" + fileSave;
+            System.IO.File.Copy(System.Web.HttpContext.Current.Server.MapPath(dirTemplate), System.Web.HttpContext.Current.Server.MapPath(des));
+            //code day nhen
+
+            string path = Server.MapPath("~/TaiLieu/Temps/" + fileSave);
+            FileInfo fileInfo = new FileInfo(path);
+            ExcelPackage package = null;
+
+            using (package = new ExcelPackage(fileInfo))
+            {
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
+                var data = db.DM_HocSinh.Where(p => p.MaTruong == MaDonVi).ToList();
+
+                int dong = 2;
+
+                foreach (var item in data)
+                {
+
+                    worksheet.Cells[dong, 2].Value = item.HoChuLot;
+                    worksheet.Cells[dong, 3].Value = item.Ten;
+                    worksheet.Cells[dong, 4].Value = item.NamHoc;
+                    worksheet.Cells[dong, 5].Value = item.Lop;
+                    worksheet.Cells[dong, 6].Value = item.GioiTinh;
+                    worksheet.Cells[dong, 7].Value = item.NamSinh;
+                    worksheet.Cells[dong, 8].Value = item.DanToc;
+                    worksheet.Cells[dong, 9].Value = item.NoiSinh;
+                    worksheet.Cells[dong, 10].Value = item.DienUT;
+                    worksheet.Cells[dong, 11].Value = item.DienKK;
+                    worksheet.Cells[dong, 12].Value = item.Toan;
+                    worksheet.Cells[dong, 13].Value = item.Ly;
+                    worksheet.Cells[dong, 14].Value = item.Hoa;
+                    worksheet.Cells[dong, 15].Value = item.Sinh;
+                    worksheet.Cells[dong, 16].Value = item.NguVan;
+                    worksheet.Cells[dong, 17].Value = item.Su;
+                    worksheet.Cells[dong, 18].Value = item.Dia;
+                    worksheet.Cells[dong, 19].Value = item.TiengAnh;
+                    worksheet.Cells[dong, 20].Value = item.GDCD;
+                    worksheet.Cells[dong, 21].Value = item.CongNghe;
+                    worksheet.Cells[dong, 22].Value = item.TiengPhap;
+                    worksheet.Cells[dong, 23].Value = item.TheDuc;
+                    worksheet.Cells[dong, 24].Value = item.Nhac;
+                    worksheet.Cells[dong, 25].Value = item.MyThuat;
+                    worksheet.Cells[dong, 26].Value = item.TBCN;
+                    worksheet.Cells[dong, 27].Value = item.XepLoaiHL;
+                    worksheet.Cells[dong, 28].Value = item.XepLoaiHK;
+                    worksheet.Cells[dong, 29].Value = item.XepLoaiTN;
+                    worksheet.Cells[dong, 30].Value = item.BuoiNghi;
+                    dong += 1;
+
+                }
+
+                package.Save();
+                package.Dispose();
+            }
+            byte[] filedata = System.IO.File.ReadAllBytes(Server.MapPath(des));
+            string contentType = MimeMapping.GetMimeMapping(Server.MapPath(des));
+            System.IO.File.Delete(Server.MapPath(des));
+            return File(filedata, contentType, MaDonVi + "_DanhSachHocSinh.xlsx");
+        }
     }
 }
