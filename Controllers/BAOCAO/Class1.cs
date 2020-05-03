@@ -7,5 +7,6 @@ namespace VBCC.Controllers.BAOCAO
 {
     public class Class1
     {
+        public int STT { get; set; }
     }
 }
