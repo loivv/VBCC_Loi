@@ -25,17 +25,17 @@ namespace VBCC.Models
         public string NoiSinh { get; set; }
         public string DienUT { get; set; }
         public string DienKK { get; set; }
-        public string Toan { get; set; }
-        public string Ly { get; set; }
-        public string Hoa { get; set; }
-        public string Sinh { get; set; }
-        public string NguVan { get; set; }
-        public string Su { get; set; }
-        public string Dia { get; set; }
-        public string TiengAnh { get; set; }
-        public string GDCD { get; set; }
-        public string CongNghe { get; set; }
-        public string TiengPhap { get; set; }
+        public Nullable<double> Toan { get; set; }
+        public Nullable<double> Ly { get; set; }
+        public Nullable<double> Hoa { get; set; }
+        public Nullable<double> Sinh { get; set; }
+        public Nullable<double> NguVan { get; set; }
+        public Nullable<double> Su { get; set; }
+        public Nullable<double> Dia { get; set; }
+        public Nullable<double> TiengAnh { get; set; }
+        public Nullable<double> GDCD { get; set; }
+        public Nullable<double> CongNghe { get; set; }
+        public Nullable<double> TiengPhap { get; set; }
         public string TheDuc { get; set; }
         public string Nhac { get; set; }
         public string MyThuat { get; set; }
@@ -52,5 +52,7 @@ namespace VBCC.Models
         public string Ngay { get; set; }
         public string Thang { get; set; }
         public string Nam { get; set; }
+        public Nullable<System.DateTime> NgayChuyen { get; set; }
+        public Nullable<System.DateTime> NgayDuyet { get; set; }
     }
 }
