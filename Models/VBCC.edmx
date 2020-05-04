@@ -95,7 +95,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaTruong" Type="nvarchar" MaxLength="20" />
           <Property Name="NamHoc" Type="nvarchar" MaxLength="4" />
           <Property Name="HoChuLot" Type="nvarchar" MaxLength="50" />
@@ -106,17 +106,17 @@
           <Property Name="NoiSinh" Type="nvarchar" MaxLength="100" />
           <Property Name="DienUT" Type="nvarchar" MaxLength="50" />
           <Property Name="DienKK" Type="nvarchar" MaxLength="50" />
-          <Property Name="Toan" Type="nvarchar" MaxLength="4" />
-          <Property Name="Ly" Type="nvarchar" MaxLength="4" />
-          <Property Name="Hoa" Type="nvarchar" MaxLength="4" />
-          <Property Name="Sinh" Type="nvarchar" MaxLength="4" />
-          <Property Name="NguVan" Type="nvarchar" MaxLength="4" />
-          <Property Name="Su" Type="nvarchar" MaxLength="4" />
-          <Property Name="Dia" Type="nvarchar" MaxLength="4" />
-          <Property Name="TiengAnh" Type="nvarchar" MaxLength="4" />
-          <Property Name="GDCD" Type="nvarchar" MaxLength="4" />
-          <Property Name="CongNghe" Type="nvarchar" MaxLength="4" />
-          <Property Name="TiengPhap" Type="nvarchar" MaxLength="4" />
+          <Property Name="Toan" Type="float" />
+          <Property Name="Ly" Type="float" />
+          <Property Name="Hoa" Type="float" />
+          <Property Name="Sinh" Type="float" />
+          <Property Name="NguVan" Type="float" />
+          <Property Name="Su" Type="float" />
+          <Property Name="Dia" Type="float" />
+          <Property Name="TiengAnh" Type="float" />
+          <Property Name="GDCD" Type="float" />
+          <Property Name="CongNghe" Type="float" />
+          <Property Name="TiengPhap" Type="float" />
           <Property Name="TheDuc" Type="nvarchar" MaxLength="4" />
           <Property Name="Nhac" Type="nvarchar" MaxLength="4" />
           <Property Name="MyThuat" Type="nvarchar" MaxLength="4" />
@@ -133,6 +133,8 @@
           <Property Name="Ngay" Type="nvarchar" MaxLength="2" />
           <Property Name="Thang" Type="nvarchar" MaxLength="2" />
           <Property Name="Nam" Type="nvarchar" MaxLength="4" />
+          <Property Name="NgayChuyen" Type="date" />
+          <Property Name="NgayDuyet" Type="date" />
         </EntityType>
         <EntityType Name="DM_LopHoc">
           <Key>
@@ -782,7 +784,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaTruong" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="NamHoc" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
           <Property Name="HoChuLot" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -793,17 +795,17 @@
           <Property Name="NoiSinh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DienUT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DienKK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Toan" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-          <Property Name="Ly" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-          <Property Name="Hoa" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-          <Property Name="Sinh" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-          <Property Name="NguVan" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-          <Property Name="Su" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-          <Property Name="Dia" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-          <Property Name="TiengAnh" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-          <Property Name="GDCD" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-          <Property Name="CongNghe" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-          <Property Name="TiengPhap" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Toan" Type="Double" />
+          <Property Name="Ly" Type="Double" />
+          <Property Name="Hoa" Type="Double" />
+          <Property Name="Sinh" Type="Double" />
+          <Property Name="NguVan" Type="Double" />
+          <Property Name="Su" Type="Double" />
+          <Property Name="Dia" Type="Double" />
+          <Property Name="TiengAnh" Type="Double" />
+          <Property Name="GDCD" Type="Double" />
+          <Property Name="CongNghe" Type="Double" />
+          <Property Name="TiengPhap" Type="Double" />
           <Property Name="TheDuc" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
           <Property Name="Nhac" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
           <Property Name="MyThuat" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
@@ -820,6 +822,8 @@
           <Property Name="Ngay" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
           <Property Name="Thang" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
           <Property Name="Nam" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="NgayChuyen" Type="DateTime" Precision="0" />
+          <Property Name="NgayDuyet" Type="DateTime" Precision="0" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1154,6 +1158,8 @@
           <EntitySetMapping Name="DM_HocSinh">
             <EntityTypeMapping TypeName="VBCCModel.DM_HocSinh">
               <MappingFragment StoreEntitySet="DM_HocSinh">
+                <ScalarProperty Name="NgayDuyet" ColumnName="NgayDuyet" />
+                <ScalarProperty Name="NgayChuyen" ColumnName="NgayChuyen" />
                 <ScalarProperty Name="Nam" ColumnName="Nam" />
                 <ScalarProperty Name="Thang" ColumnName="Thang" />
                 <ScalarProperty Name="Ngay" ColumnName="Ngay" />
